@@ -1,2 +1,5 @@
 FROM node:22-alpine
-COPY package.json README.md /app/
+WORKDIR /app
+COPY . .
+RUN npm install
+CMD ["npm","run","dev"]
